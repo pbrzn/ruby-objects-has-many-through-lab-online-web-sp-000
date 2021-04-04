@@ -21,7 +21,7 @@ class Patient
   
   def doctors
     doctor_array=[]
-    self.appointments.select {|appt| doctor_array << appt.doctor}
+    self.appointments.each {|appt| doctor_array << appt.doctor}
     doctor_array
   end
 end
